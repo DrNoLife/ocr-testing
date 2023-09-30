@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    image: webapi:latest
+    container_name: webapi_container
+    ports:
+      - "5076:80"
+      - "5075:443"
+

@@ -25,6 +25,28 @@ I added a web API in the form of C# minimal API.
 
 Currently, hasn't been dockerized yet. Will be in the future.
 
+## Usage
+
+The OCR service is exposed via a HTTP POST endpoint at `/ocr`.
+
+- **Endpoint:** `/ocr`
+- **Method:** POST
+- **Parameters:** 
+    - `imageFile` (form-data): The image file to process.
+
+### Example Request
+
+Using a tool like `curl`, you can send a request to the service as follows:
+
+```bash
+curl -X POST -H "Content-Type: multipart/form-data" -F "imageFile=@path_to_your_image.jpg" http://localhost:5075/ocr
+```
+
+Replace path_to_your_image.jpg with the path to the image file you want to process.
+
+### Response
+The service will respond with the OCR processed text lines if the image processing is successful, or an error message if there is an issue with the request or processing.
+
 ## Learnings
 
 While the application works decently, OCR extraction is not always perfect. Real-world application would likely require user intervention to validate and correct the extracted text.
