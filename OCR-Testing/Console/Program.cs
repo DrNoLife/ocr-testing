@@ -1,7 +1,7 @@
 ﻿using Tesseract;
 
 using var engine = new TesseractEngine(@"./tessdata", "eng", EngineMode.Default);
-using var image = Pix.LoadFromFile(@"./images/yes.png");
+using var image = Pix.LoadFromFile(@"./images/anonlovesspace.png");
 using var page = engine.Process(image);
 
 var text = page.GetText();

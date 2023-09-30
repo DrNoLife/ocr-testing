@@ -19,6 +19,12 @@ The application processes the OCR-extracted text based on the following rules:
 3. Replace the character `|` with `I`.
 4. Ensure every line or sentence starts with `>`.
 
+## Web API
+
+I added a web API in the form of C# minimal API.
+
+Currently, hasn't been dockerized yet. Will be in the future.
+
 ## Learnings
 
 While the application works decently, OCR extraction is not always perfect. Real-world application would likely require user intervention to validate and correct the extracted text.
